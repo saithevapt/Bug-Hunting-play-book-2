@@ -1,0 +1,7 @@
+Try to apply the same discount code multiple times to assess if it's reusable.
+
+If the discount code is unique, evaluate for race conditions by applying the same code for two accounts simultaneously.
+
+Test for Mass Assignment or HTTP Parameter Pollution to see if you can apply multiple discount codes when the application is designed to accept only one.
+
+Attempt to apply discount codes to non-discounted items by manipulating the server-side request.
