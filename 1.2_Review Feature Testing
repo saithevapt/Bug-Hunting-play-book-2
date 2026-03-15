@@ -1,0 +1,5 @@
+Assess if you can post a product review as a verified reviewer without having purchased the item.
+
+Attempt to provide a rating outside of the standard scale, for instance, a 0, 6 or negative number in a 1 to 5 scale system.
+
+Test if the same user can post multiple ratings for a single product. This is useful in detecting potential race conditions.
