@@ -1,0 +1,26 @@
+They help filter URLs likely vulnerable to specific attacks
+
+go install github.com/tomnomnom/gf@latest
+export PATH=$PATH:~/go/bin
+git clone https://github.com/1ndianl33t/Gf-Patterns
+mkdir ~/.gf
+cp Gf-Patterns/*.json ~/.gf
+
+
+cat urls.txt | gf xss
+
+
+                                                                                         
+                                                                                           Common GF Patterns
+
+These patterns detect possible vulnerable parameters.
+
+Pattern	Detects
+gf xss	XSS parameters
+gf sqli	SQL injection
+gf ssrf	SSRF
+gf lfi	Local file inclusion
+gf redirect	Open redirect
+gf rce	Command injection
+gf idor	IDOR indicators
+gf debug_logic	Debug endpoints
