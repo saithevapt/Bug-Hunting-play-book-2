@@ -1,0 +1,4 @@
+1.	git clone https://github.com/defparam/smuggler.git
+2.	cd smuggler
+3.	python3 smuggler.py -h
+4.	./smuggler.py -u <URL>
