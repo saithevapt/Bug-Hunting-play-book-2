@@ -1,0 +1,24 @@
+                                                                                  Steps to Reproduce 
+
+1.	Assume a user has ₹1000 available in their wallet balance.
+
+2.	The user attempts to purchase a product (e.g., food) costing ₹800.
+
+3.	Normally, the backend should process the transaction as:
+1000 - 800 = 200
+
+4.	Intercept the payment request using a proxy tool such as Burp Suite.
+
+5.	Modify the transaction amount parameter from:
+amount = 800
+to
+amount = -800
+
+6.	Send the modified request to the server.
+
+7.	Observe that the application processes the calculation incorrectly:
+1000 - (-800) = 1800
+
+8.	Instead of deducting the payment amount, the application adds the amount to the wallet balance.
+
+9.	This confirms that negative values are not validated, allowing attackers to artificially increase their balance.
