@@ -1,0 +1,76 @@
+1️⃣ Attack Vector (AV)
+How the attacker reaches the vulnerable system
+Value	Meaning
+AV:N	Network (over the internet)
+AV:A	Adjacent network (same Wi-Fi / LAN)
+AV:L	Local system access
+AV:P	Physical access required
+
+
+2️⃣ Attack Complexity (AC)
+How difficult the attack is
+Value	Meaning
+AC:L	Low complexity (easy to exploit)
+AC:H	High complexity (needs special conditions)
+
+
+
+3️⃣ Privileges Required (PR)
+Does attacker need login access?
+Value	Meaning
+PR:N	No authentication required
+PR:L	Low privileges (normal user)
+PR:H	High privileges (admin access)
+
+	
+4️⃣ User Interaction (UI)
+Does another user need to interact?
+Value	Meaning
+UI:N	No user interaction
+UI:R	User interaction required
+
+
+5️⃣ Scope (S)
+Does the vulnerability affect other systems/components?
+Value	Meaning
+S:U	Scope Unchanged
+S:C	Scope Changed
+
+
+6️⃣ Confidentiality Impact (C)
+Does it expose sensitive data?
+Value	Meaning
+C:N	No impact
+C:L	Low data exposure
+C:H	High data exposure
+Example:
+SQL Injection → C:H
+________________________________________
+
+
+
+
+
+
+
+7️⃣ Integrity Impact (I)
+Can attacker modify data?
+Value	Meaning
+I:N	No impact
+I:L	Low modification
+I:H	High modification
+Example:
+Database modification → I:H
+________________________________________
+8️⃣ Availability Impact (A)
+Can attacker crash or stop the system?
+Value	Meaning
+A:N	No impact
+A:L	Low impact
+A:H	High impact
+
+
+
+
+
+
