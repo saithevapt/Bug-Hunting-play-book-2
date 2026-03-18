@@ -1,0 +1,6 @@
+Attacker uploads a file named profile.jpg to your site
+File actually contains JavaScript code: <script>alert('XSS')</script>
+Server correctly serves file as Content-Type: image/jpeg
+Without X-Content-Type-Options, browser inspects file contents
+Browser detects HTML/JavaScript and executes it!
+Attacker gains XSS execution in victim's browser
