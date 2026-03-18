@@ -1,0 +1,10 @@
+1.Create two separate accounts using: Different email addresses
+                                        The same username
+
+2.Verify that both accounts can exist simultaneously.
+
+3.Initiate a password reset using the shared username.
+
+4.Observe that:
+The reset process applies to accounts sharing that username
+Changing the password impacts more than one account
