@@ -1,0 +1,29 @@
+Strict-Transport-Security (HSTS) is used to:
+
+🛡️ 1. Force HTTPS always
+Prevents browser from using HTTP
+Protects sensitive data (login, cookies)
+
+🧨 2. Stop SSL Stripping attacks
+Attackers try to downgrade HTTPS → HTTP
+HSTS blocks this after first visit
+
+🔒 3. Protect session cookies
+
+Prevents cookies from being sent over HTTP
+Reduces session hijacking risk
+
+🌐 4. Enforce secure communication across site
+Ensures all future requests use HTTPS only
+
+
+✅ Safe / Recommended HSTS Rule
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+🧠 Explanation of each part
+⏳ max-age=31536000
+
+Time in seconds (1 year)
+
+👉 Meaning:
+Browser remembers rule for 1 year
+Will never use HTTP during this period
