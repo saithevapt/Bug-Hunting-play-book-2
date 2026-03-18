@@ -1,0 +1,21 @@
+👉 Attacker uploads a file (any extension)
+👉 Inside file → JavaScript payload
+👉 Server serves it as:
+
+Content-Type: text/plain
+
+👉 Browser guesses (sniffs) and executes it ❌
+
+
+3️⃣ Browser behavior
+❌ Without nosniff
+
+👉 Browser says:
+
+“This looks like HTML/JS”
+
+👉 Executes:
+
+alert(document.cookie)
+
+🔥 XSS happens
