@@ -1,0 +1,8 @@
+Authentication endpoints
+grep -iE "login|auth|token|session|oauth" url.txt
+
+User / Account endpoints
+grep -iE "user|account|profile|member" url.txt
+
+Admin endpoints
+grep -iE "admin|dashboard|manage|panel"
