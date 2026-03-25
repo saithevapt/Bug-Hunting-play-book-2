@@ -1,0 +1,99 @@
+SSTI is a web vulnerability where an attacker can inject malicious input into a server-side template engine (like Jinja2, Twig, etc.), causing the server to execute unintended code.
+
+        
+                                                                        Common Testable Inputs (High Priority)
+
+
+1. Search fields
+/search?q=hello
+
+Try payload:
+
+{{7*7}}
+
+2. Login / Signup forms
+Username / email fields
+
+Example:
+
+username = {{7*7}}
+
+3. Contact / Feedback forms
+Name, message, subject fields
+These often get rendered in admin dashboards
+
+4. Profile fields
+Name, bio, description
+Many apps display this using templates
+
+5. Comment sections / blogs
+Comments often rendered dynamically → high chance
+
+6. Error messages
+
+Example:
+
+Invalid user: {{input}}
+If reflected → test it
+
+7. Email templates
+Password reset emails
+Welcome emails
+(Stored SSTI possible here)
+
+8. Headers (advanced testing)
+
+Sometimes apps use headers in templates:
+
+User-Agent
+X-Forwarded-For
+
+9. URL parameters (VERY IMPORTANT)
+
+Test all GET params:
+
+?id=1
+?name=test
+?page=home
+
+10. File names / upload metadata
+
+Filename like: {{7*7}}.jpg
+
+11.Cookie: username={{7*7}}
+
+12.JSON body: {"name":"{{7*7}}"}
+
+
+
+                                                                                    Basic Detection Payloads
+
+{{7*7}}
+${7*7}
+<%= 7*7 %>
+#{7*7}
+{{7+7}}
+
+
+                                                                                  Now identify the engine
+
+
+🔹 Jinja2 (Python) ✅ most common
+{{7*'7'}}
+👉 Output: 7777777
+
+🔹 Twig (PHP)
+{{7*'7'}}
+👉 Output: 49
+
+🔹 Freemarker (Java)
+${7*7}
+👉 Output: 49
+
+🔹 Velocity (Java)
+#set($x=7*7) $x
+👉 Output: 49
+
+
+                                                                                     Automatic Tool
+  https://github.com/epinna/tplmap
