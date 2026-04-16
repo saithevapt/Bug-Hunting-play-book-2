@@ -1,0 +1,5 @@
+Note session ID before logout
+Login again
+Compare session IDs
+
+Vulnerable if: Same session reused
