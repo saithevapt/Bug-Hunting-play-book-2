@@ -1,0 +1,6 @@
+Insecure deserialization can lead to privilege escalation when an application trusts user-controlled serialized data (e.g., cookies) without validation.
+
+Attackers can:
+Identify serialized data (often Base64 / URL encoded)
+Decode it
+Modify sensitive fields (like role=user → admin)
