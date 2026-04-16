@@ -1,0 +1,8 @@
+1. Check server-side validation
+Send a request without CAPTCHA
+If it still works → vulnerability
+
+2. Check token reuse (replay test)
+Capture a request with a valid CAPTCHA
+Send the same request again
+If it works again → token reuse issue
