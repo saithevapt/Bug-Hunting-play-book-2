@@ -1,0 +1,7 @@
+paramspider -d example.com
+arjun -u https://example.com
+
+https://wordlists-cdn.assetnote.io/data/automated/httparchive_parameters_top_1m_2026_02_27.txt
+https://github.com/PortSwigger/param-miner/blob/master/resources/params
+
+  
