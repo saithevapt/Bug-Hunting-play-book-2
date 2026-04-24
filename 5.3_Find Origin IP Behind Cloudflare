@@ -1,0 +1,7 @@
+VirusTotal 
+FOCA
+Censys
+Shodan - Ssl.cert.subject.CN:"suniv.ac.in"
+ViewDNS
+SecurityTrails 
+dnsrecon -d suniv.ac.in
