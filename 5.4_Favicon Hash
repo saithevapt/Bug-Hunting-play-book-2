@@ -1,0 +1,3 @@
+By converting a favicon into a hash value and using that hash in tools like Shodan, ZoomEye, Censys, and FOFA, we can find related IP addresses, subdomains, phishing domains, and origin IPs
+
+#https://kriztalz.sh/favicon-hash/
