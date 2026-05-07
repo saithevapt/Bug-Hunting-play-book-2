@@ -1,0 +1,7 @@
+Steps to reproduce:
+
+Create first account in application with email say abc@gmail.com and password.
+Logout of the account and create another account with same email and different password.
+You can even try to change email case in some case like from abc@gmail.com to Abc@gmail.com
+Finish the creation process — and see that it succeeds
+Now go back and try to login with email and the new password. You are successfully logged in.
