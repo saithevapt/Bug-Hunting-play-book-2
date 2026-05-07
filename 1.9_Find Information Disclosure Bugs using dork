@@ -1,2 +1,17 @@
 https://dorks.faisalahmed.me/
 https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
+
+
+site:example.com | site:*.example.com intitle:"Index of" OR intitle:"Parent Directory" OR intitle:"Directory Listing"
+filetype:php | filetype:asp | filetype:aspx | filetype:jsp | filetype:html | filetype:json | filetype:yaml | filetype:xml |
+filetype:conf | filetype:config | filetype:sql | filetype:log | filetype:txt | filetype:htpasswd | intext:"Index of /admin"
+| intext:"Index of /login" | intext:"Index of /config" | intext:"Index of /backup" | intext:"Error establishing a
+database connection" | intext:"Welcome to WordPress" | intext:"powered by JIRA" | intext:"powered by Trello" |
+intext:"API_KEY" | intext:"API_SECRET" | intext:"SECRET_KEY" | intext:"DB_PASSWORD" | intext:"DB_PASS" |
+intext:"ACCESS_TOKEN" | intext:"AUTH_TOKEN" | intext:".env" | intext:"environment" | intext:"config.php" |
+intext:"web.config" | intext:"appsettings.json" | intext:"application.properties" | intext:"db_conn.php" |
+intext:"database.php" | intext:"settings.py" | intext:"secrets.yml" | intext:"connectionStrings.config" |
+intext:"app.config" | intext:"config.xml" | intext:"password" | intext:"username" | intext:"apikey" | intext:"api_key"
+| intext:"api_secret" | intext:"credentials" | intext:"ftp" | intext:"ssh" | intext:"private key" | intext:"certificate" |
+intext:"login" | intext:"secret" | intext:"server: Apache" | intext:"server: Microsoft -IIS" | intext:"server: nginx" |
+intext:"Powered by PHP" | intext:"Powered by ASP.NET" | intext:"Powered by JBoss"
