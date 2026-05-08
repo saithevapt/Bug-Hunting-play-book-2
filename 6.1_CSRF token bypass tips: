@@ -1,5 +1,0 @@
-1. Remove or leave token blank.
-2. Change POST to GET.
-3. Replace token with random value.
-4. Reuse a previous token.
-5. Remove referer header. 
