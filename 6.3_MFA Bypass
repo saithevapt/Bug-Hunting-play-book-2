@@ -1,0 +1,9 @@
+1. Login to the application using valid test credentials
+
+2. Setup MFA on the account
+
+3. Logout and reset the password using the `Forgot Password` feature
+
+4. Log in with the new password
+
+5. Success dashboard access
