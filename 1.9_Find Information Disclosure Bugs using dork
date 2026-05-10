@@ -12,6 +12,9 @@ site:codebeautify. org "example. com"
 site:codepen. io "example. com"
 
 
+site:example[.]com ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
+
+
 
 site:example.com | site:*.example.com intitle:"Index of" OR intitle:"Parent Directory" OR intitle:"Directory Listing"
 filetype:php | filetype:asp | filetype:aspx | filetype:jsp | filetype:html | filetype:json | filetype:yaml | filetype:xml |
