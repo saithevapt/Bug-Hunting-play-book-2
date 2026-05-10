@@ -6,6 +6,13 @@ https://securitytoolkits.com/dork-for-me
 https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
 
 
+site:pastebin. com "example. com"
+site:jsfiddle. net "example. com"
+site:codebeautify. org "example. com"
+site:codepen. io "example. com"
+
+
+
 site:example.com | site:*.example.com intitle:"Index of" OR intitle:"Parent Directory" OR intitle:"Directory Listing"
 filetype:php | filetype:asp | filetype:aspx | filetype:jsp | filetype:html | filetype:json | filetype:yaml | filetype:xml |
 filetype:conf | filetype:config | filetype:sql | filetype:log | filetype:txt | filetype:htpasswd | intext:"Index of /admin"
